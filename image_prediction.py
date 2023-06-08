@@ -12,9 +12,10 @@ def load_predict_image(img_path, model):
         resized_img = cv2.resize(img_rgb, (config.image_width, config.image_height))
         resized_img = np.expand_dims(resized_img, axis=0)
         resized_img = np.array(resized_img)
-    except:
+    except Exception as e:
         print("Error in image: " + img_path)
-        
+        print("Exception message: ", str(e))
+
     pred = model.predict(resized_img)
     pred_label = np.argmax(pred, axis=1)
     pred_class = config.classes[pred_label[0]]
