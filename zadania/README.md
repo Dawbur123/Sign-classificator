@@ -6,6 +6,7 @@ Napisz funkcję, która przygotuje obrazek, aby można było go podać modelowi.
 Funkcja będzie brała jako argument ścieżkę jako string do obrazka i zwracała numpy array jako ten obrazek
 
 Przydatna będzie biblioteka OpenCV. (import cv2)
+
     -cv2.imread(img_path, cv2.IMREAD_COLOR) załadowanie obrazka, ważny jest tutaj argument cv2.IMREAD_COLOR precyzujemy w ten sposób, aby obrazek został wczytany z kolorami a dokładniej w formacie BGR.
     -cv2.cvtColor(img, cv2.COLOR_BGR2RGB) trzeba będzie przekonwertować załadowany obrazek z BGR na RGB.
     -cv2.resize(img_rgb, (image_width, image_height)) musimy przeskalować nasz obraz, aby liczba neuronów które będa ładowane przez model była taka sama na jakiej był uczony. W naszym przypadku to będzie 30x30.
