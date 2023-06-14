@@ -1,7 +1,7 @@
-#Polecenia do zadań
+# Polecenia do zadań
 Zadania trzeba robić po kolei, tzn. jak nie zrobicie pierwszego, nie zrobić kolejnych.
 
-##Zadanie 1.
+## Zadanie 1.
 Napisz funkcję, która przygotuje obrazek, aby można było go podać modelowi. Model oczekuje 4 wymiarowej listy (Ilość zdjęć, szerokość=30  wysokość=30, kanały=3). W naszym przypadku chcemy zrobić tylko dla jednego obrazka dlatego ilość zdjęć będzie wynosić 1.
 Funkcja będzie brała jako argument ścieżkę jako string do obrazka i zwracała numpy array jako ten obrazek
 
@@ -16,7 +16,7 @@ Przyda nam sie też biblioteka numpy (import numpy as np)
 Przetestuj działanie funkcji na jakimś wybranym przez ciebie obrazku i wykonaj -  print(returned_img.shape) jeśli otrzymasz (1, 30, 30, 3) znaczy ze jest git.
 Wyślij kod i wykonanie.
 
-##Zadanie 2.
+## Zadanie 2.
 W tym zadaniu trzeba będzie spytać nasz model o to jakiej klasy jest wybrane przez nas zdjęcie znaku.
 Trzeba będzie użyć wcześniej napisanej funkji i wytrenowanego przez nas modelu. Należy go pobrać z dysku google (66MB):
 https://drive.google.com/file/d/1a5bylNuhRNaruQoUytkCRT60vWuAsBlo/view?usp=drive_link
