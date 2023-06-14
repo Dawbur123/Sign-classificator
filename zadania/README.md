@@ -7,27 +7,37 @@ Funkcja będzie brała jako argument ścieżkę jako string do obrazka i zwraca�
 
 Przydatna będzie biblioteka OpenCV. (import cv2)
 
-    -cv2.imread(img_path, cv2.IMREAD_COLOR) załadowanie obrazka, ważny jest tutaj argument cv2.IMREAD_COLOR precyzujemy w ten sposób, aby obrazek został wczytany z kolorami a dokładniej w formacie BGR.
-    -cv2.cvtColor(img, cv2.COLOR_BGR2RGB) trzeba będzie przekonwertować załadowany obrazek z BGR na RGB.
-    -cv2.resize(img_rgb, (image_width, image_height)) musimy przeskalować nasz obraz, aby liczba neuronów które będa ładowane przez model była taka sama na jakiej był uczony. W naszym przypadku to będzie 30x30.
+    cv2.imread(img_path, cv2.IMREAD_COLOR) załadowanie obrazka, ważny jest tutaj argument cv2.IMREAD_COLOR precyzujemy w ten sposób, aby obrazek został wczytany z kolorami a dokładniej w formacie BGR.
+    cv2.cvtColor(img, cv2.COLOR_BGR2RGB) trzeba będzie przekonwertować załadowany obrazek z BGR na RGB.
+    cv2.resize(img_rgb, (image_width, image_height)) musimy przeskalować nasz obraz, aby liczba neuronów które będa ładowane przez model była taka sama na jakiej był uczony. W naszym przypadku to będzie 30x30.
 
 Przyda nam sie też biblioteka numpy (import numpy as np)
-    - np.expand_dims(resized_img, axis=0) Spowoduje to stworzenie nowego wymiaru. Kształt naszej listy będzie wyglądał (1, 30, 30, 3) zamiast (30, 30, 3).
 
-Przetestuj działanie funkcji na jakimś wybranym przez ciebie obrazku i wykonaj -  print(returned_img.shape) jeśli otrzymasz (1, 30, 30, 3) znaczy ze jest git.
-Wyślij kod i wykonanie.
+    np.expand_dims(resized_img, axis=0) Spowoduje to stworzenie nowego wymiaru. Kształt naszej listy będzie wyglądał (1, 30, 30, 3) zamiast (30, 30, 3).
+
+Przetestuj działanie funkcji na jakimś wybranym przez ciebie obrazku i wykonaj
+
+    print(returned_img.shape) jeśli otrzymasz (1, 30, 30, 3) znaczy ze jest git.
+
+Wyślij kod i zwrócenie printa.
 
 ## Zadanie 2.
 W tym zadaniu trzeba będzie spytać nasz model o to jakiej klasy jest wybrane przez nas zdjęcie znaku.
 Trzeba będzie użyć wcześniej napisanej funkji i wytrenowanego przez nas modelu. Należy go pobrać z dysku google (66MB):
 https://drive.google.com/file/d/1a5bylNuhRNaruQoUytkCRT60vWuAsBlo/view?usp=drive_link
+
 Po pobraniu, należy załadować model w naszym pliku pythona. 
 Potrzebna będzie do tego biblioteka tensorflow (import tensorflow as tf)
-model = tf.keras.models.load_model(path_to_model)
-po załadowaniu należy użyć metody model.predict() jako argument podać obrazek zwrócony przez funkcje z poprzedniego zadania
+
+    model = tf.keras.models.load_model(path_to_model)
+
+Po załadowaniu należy użyć metody model.predict() jako argument podać obrazek zwrócony przez funkcje z poprzedniego zadania
 Wyprintuj zwróconą wartość przez tą metode. Jest to lista z predykcją klasy znaku dla podanej listy zdjęć, daliśmy mu tylko jedno zdjęcie więc będzie to lista w liście po prostu. Będzie występować tylko jedna "1" którą model postawił dla klasy która przewidział.
 Aby zobaczyć jaki to nr klasy wystarczy zrobić np.argmax(pred, axis=1) zwróci nam to jedno elementową liste która zawiera index występowania 1 
-Jednak same numery nam nic nie mówią dlatego zamienimy je na nazwy znaków. Przekopiuj poniższy python dictionary do swojego kodu, a następnie zamień index na wartość String nazwy znaku.
+
+Jednak same numery nam nic nie mówią dlatego zamienimy je na nazwy znaków. Przekopiuj poniższy python dictionary do swojego kodu, a następnie odkoduj String nazwy znaku. 
+
+    classes[0] = "Speed limit (20km/h)"
 
 classes = { 0:'Speed limit (20km/h)',
             1:'Speed limit (30km/h)', 
