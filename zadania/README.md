@@ -35,9 +35,7 @@ Po załadowaniu należy użyć metody model.predict() jako argument podać obraz
 Wyprintuj zwróconą wartość przez tą metode. Jest to lista z predykcją klasy znaku dla podanej listy zdjęć, daliśmy mu tylko jedno zdjęcie więc będzie to lista w liście po prostu. Będzie występować tylko jedna "1" którą model postawił dla klasy która przewidział.
 Aby zobaczyć jaki to nr klasy wystarczy zrobić np.argmax(pred, axis=1) zwróci nam to jedno elementową liste która zawiera index występowania 1 
 
-Jednak same numery nam nic nie mówią dlatego zamienimy je na nazwy znaków. Przekopiuj poniższy python dictionary do swojego kodu, a następnie odkoduj String nazwy znaku. 
-
-    classes[0] = "Speed limit (20km/h)"
+Jednak same numery nam nic nie mówią dlatego zamienimy je na nazwy znaków. Przekopiuj poniższy python dictionary o nazwe classes do swojego kodu, a następnie odkoduj String nazwy znaku. 
 
 classes = { 0:'Speed limit (20km/h)',
             1:'Speed limit (30km/h)', 
