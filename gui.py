@@ -11,7 +11,7 @@ def select_file():
     filetypes = (('Image files', '*.jpg'), ('Image files', '*.jpeg'), ('Image files', '*.png'))
     filename = fd.askopenfilename(
         title='Open a file',
-        initialdir='C:/Users/Asia/Pulpit/STUDIA/TI/semestr4/jpwp/projekt',
+        initialdir='/',
         filetypes=filetypes)
     file_path = os.path.abspath(filename)
     return file_path
