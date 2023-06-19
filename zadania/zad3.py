@@ -32,7 +32,7 @@ root.columnconfigure(0, weight=1)
 root.columnconfigure(1, weight=1)
 root.rowconfigure(0, weight=1)
 
-file_path_label = tk.Label(frame, height=1, width=55, text="")
+file_path_label = tk.Label(root, height=1, width=55, text="")
 file_path_label.grid(row=0, column=0)
 
 open_button = tk.Button(
@@ -42,3 +42,5 @@ open_button = tk.Button(
     text='Open a File',
     command=open_button_click)
 open_button.grid(row=0, column=1)
+
+root.mainloop()
