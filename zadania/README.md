@@ -91,7 +91,7 @@ W celu wykonania zadania wykorzystaj poniższe importy:
     from tkinter import filedialog as fd
     import os
 
-Funkcje guzika zaprojektuj w funkcji select_path(), a wyświetlanie ścieżki w funkcji update_file_path_label. 
+Funkcje guzika zaprojektuj w funkcji open_button(), wykorzystującej funkcję select_path() do uzyskania ścieżki pliku, a wyświetlanie ścieżki w funkcji update_file_path_label. 
 
 Do wykonania tego zadania przydadzą Ci się metody:
 - askopenfilename
