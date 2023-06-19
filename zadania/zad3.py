@@ -39,7 +39,7 @@ open_button = tk.Button(
     root,
     height=1,
     width=10,
-    text='Open a File',
+    text='Open',
     command=open_button_click)
 open_button.grid(row=0, column=1)
 
