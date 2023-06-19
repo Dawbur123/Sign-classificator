@@ -1,5 +1,5 @@
 # Polecenia do zadań
-Zadania trzeba robić po kolei, tzn. jak nie zrobicie pierwszego, nie zrobić kolejnych.
+Zadania trzeba robić po kolei, tzn. jak nie zrobicie pierwszego, nie zrobić kolejnych. 
 
 ## Zadanie 1.
 Napisz funkcję, która przygotuje obrazek, aby można było go podać modelowi. Model oczekuje 4 wymiarowej listy (Ilość zdjęć, szerokość=30  wysokość=30, kanały=3). W naszym przypadku chcemy zrobić tylko dla jednego obrazka dlatego ilość zdjęć będzie wynosić 1.
@@ -82,3 +82,23 @@ classes = { 0:'Speed limit (20km/h)',
             42:'End no passing veh > 3.5 tons' }
 
 Wyprintuj otrzymaną nazwe, zrób ss kodu i otrzymanej nazwy
+
+## Zadanie 3.
+Zaprojektuj proste GUI, które będzie składało się z dwóch elementów: guzika, pozwalającego na wybranie pliku i labela, na którym będzie wyświetlana ścieżka wybranego pliku - elementy te powinny znajdować się obok siebie. Okno powinno mieć wymiary 600x300 i wymiar ten powinien być niemożliwy do zmiany, tytułem okna powinien być Twój numer indeksu.
+W celu wykonania zadania wykorzystaj poniższe importy:
+
+    import tkinter as tk
+    from tkinter import filedialog as fd
+    import os
+
+Funkcje guzika zaprojektuj w funkcji select_path(), a wyświetlanie ścieżki w funkcji update_file_path_label. 
+
+Do wykonania tego zadania przydadzą Ci się metody:
+- askopenfilename
+- abspath
+- columnconfigure / rowconfigure
+
+W rozwiązaniu zadania umieść ss kodu i swojego GUI.
+
+## Zadanie 4.
+Korzystając z rozwiązań do poprzednich zadań, stwórz okno, które będzie wypisywało zdjęcie i wynik działania modelu z zadań 1 i 2. Przyda Ci się do tego biblioteka PILLOW. Okno stwórz analogicznie jak w poprzednim zadaniu. To tyle wskazówek, powodzenia. Nie zapomnij o zrobieniu ss swojego kodu i okienka. 
